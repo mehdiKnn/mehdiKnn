@@ -9,7 +9,7 @@
 
 - 📄 Know about my experiences **I'm currently working at Enedis Lab**
 
-- 📫 How to reach me **mehdikannounnel@gmail.com**
+- 📫 How to reach me **mehdikannouni@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
