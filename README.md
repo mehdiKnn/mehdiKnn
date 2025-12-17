@@ -1,11 +1,11 @@
 <h1 align="center">Hi 👋, I'm Mehdi Kannouni</h1>
 <h3 align="center">A passionate Fullstack Developper from France</h3>
 
-- 🔭 I’m currently working on **completing my Master Degree**
+- 🔭 I’m currently working on **my saas Leazy**
 
-- 🌱 I’m currently learning **Project Management and CI/CD**
+- 🌱 I’m currently learning **creating efficient AI workflow**
 
-- 📄 Know about my experiences **I'm currently working at LivLab and former Enedis Lab**
+- 📄 Know about my experiences **I'm currently working at **
 
 - 📫 How to reach me **mehdikannouni@gmail.com**
 
