@@ -16,6 +16,57 @@
 
 
 #===============================================================================
+# NOTES DE LA BUILD  (guide @Fubgun — Ice Shot Deadeye S5)
+#-------------------------------------------------------------------------------
+# Gear vise :
+#   Arc      : Obliterator Bow     Casque  : Desert Cap (-> Subterfuge Mask / Ancestral Tiara)
+#   Carquois : Volant Quiver       Torse   : Corsair Coat
+#   Bottes   : Cavalry Boots (-> Bladed Shoes)
+#   Anneaux  : Prismatic Ring      Amulette: Stellar Amulet      Ceinture: Rawhide Belt
+#
+# Mandatory Stats: Make sure to fill out your resist, you want 75% fire/cold/lightning
+#   resist. Chaos resist is good, but not mandatory to have 75%, I usually aim for 30-50%.
+#   You'll also most likely need 1-2 attribute rolls on gear, belt will solve strength and
+#   if you need intelligence, get it on a ring or amulet.
+# Rings/glove: try to focus on high flat damage to attacks, preferable cold/phys.
+# Bow: You want the highest dps ele/phys weapon you can afford. Obliterator Bow is usually
+#   the go to, as it has very high base damage and the downside is negligible. Check the
+#   notes at the bottom of the guide to learn how to craft a bow.
+# Greater Iron Rune will provide the highest dps.
+# Quiver: Just good dps stats, high flat/bow dmg or projectile speed with attack speed.
+#   Ideally just aim for 3-4 stats from the quiver shown in the gear preview.
+# Amulet: Preferable want +proj levels. Crit chance/crit damage is also good, once you swap
+#   to crit. Attributes/resist are also fine here. You need at least 30 spirit on the amulet
+#   to use all spirit gems.
+# Helmet: At the start just look for a high life/evasion/resist helmet, eventually we'll swap
+#   to a pure ES helmet with Subterfuge Mask, but you probably wont have a good one for early
+#   mapping.
+# Chest: you want the highest evasion chest you can afford, this is very important for defense,
+#   specially when combined with Beastial Skin on the passive tree. Use Greater Iron Rune.
+# Boots: You want the highest movement speed boots you can afford, it's a very important stat.
+#   Besides that look for high life/resistance.
+# Belt: Not a lot of choices here, just Life/str/resist, eventually you want to get a Headhunter.
+# Rarity is still really good in 0.5, try to hit at least 100% if you want to farm efficiently
+#   (don't focus on this if you feel like you're lacking damage or defense).
+# Jewels on tree: generic damage: attack damage, elemental damage, movement speed, bonus from
+#   quivers, projectile damage, attack speed, crit chance, crit damage, etc. Eventually you'll
+#   also want Heart of the Well with double "gain as extra" and Against the Darkness with
+#   double "gain as extra" as well.
+# Important: 1 sapphire jewel with mana on kill to sustain mana during mapping. For bosses,
+#   Mark of Siphoning II on Freezing Mark with Eternal Mark should give enough sustain.
+# Anoint (Damage): Serrated Edges — cheap and effective once you swap to crit.
+#
+# Mana Issues:
+#   Reminder: always run one jewel with 2% mana on kill.
+#   1) Run a regular mana flask with increased recovery + 2% mana on kill jewel.
+#   2) Take Conservative Casting for 3 passive points.
+#   3) Drop Wind Dancer for Mana Remnants (Harmonic Remnants II, Remnant Potency III,
+#      Khatal's Rejuvenation — for Khatal you need Dialla's Desire or 1 point into herald
+#      reservation).
+#===============================================================================
+
+
+#===============================================================================
 # 1) CURRENCY  (priorite n°1)
 #===============================================================================
 
@@ -207,51 +258,74 @@ Show
 
 
 #===============================================================================
-# 6) BASES DE CRAFT DE LA BUILD  (Arc / Carquois / Evasion)
+# 6) BASES DE CRAFT DE LA BUILD  (gear vise @Fubgun)
 #===============================================================================
 
-# --- Top bases d'arc : Warmonger / Obliterator (a tout ilvl) ------------------
+# --- Arc top : Obliterator Bow (a tout ilvl) ----------------------------------
 Show
     Class "Bow"
-    BaseType "Warmonger Bow" "Obliterator Bow"
-    SetFontSize 44
+    BaseType "Obliterator Bow"
+    SetFontSize 45
     SetTextColor 255 255 0 255
     SetBorderColor 255 255 0 255
-    SetBackgroundColor 0 60 0 255
-    PlayAlertSound 2 250
+    SetBackgroundColor 0 70 0 255
+    PlayAlertSound 2 300
     MinimapIcon 0 Yellow Triangle
     PlayEffect Yellow
 
-# --- Autres arcs haut ilvl (bonnes bases a crafter) ---------------------------
-Show
-    Class "Bow"
-    ItemLevel >= 75
-    SetFontSize 40
-    SetTextColor 200 255 100 255
-    SetBorderColor 150 200 50 255
-    MinimapIcon 1 Green Triangle
-    PlayEffect Green
-
-# --- Carquois (grosse source de degats — on garde tout haut ilvl) -------------
+# --- Carquois vise : Volant Quiver --------------------------------------------
 Show
     Class "Quiver"
-    ItemLevel >= 70
-    SetFontSize 40
-    SetTextColor 200 255 100 255
-    SetBorderColor 150 200 50 255
-    MinimapIcon 1 Green Kite
-    PlayEffect Green
+    BaseType "Volant Quiver"
+    SetFontSize 44
+    SetTextColor 255 255 0 255
+    SetBorderColor 200 255 0 255
+    SetBackgroundColor 0 60 0 255
+    PlayAlertSound 2 250
+    MinimapIcon 0 Yellow Kite
+    PlayEffect Yellow
 
-# --- Bases d'armure phares de la build (Evasion / hybride ES) -----------------
+# --- Casque / Torse / Bottes vises (Desert Cap, Corsair Coat, Cavalry Boots...) -
 Show
-    BaseType "Freebooter Cap" "Subterfuge Mask" "Polished Bracers" "Drakeskin Boots"
+    BaseType "Desert Cap" "Subterfuge Mask" "Ancestral Tiara" "Corsair Coat" "Cavalry Boots" "Bladed Shoes"
+    SetFontSize 42
+    SetTextColor 100 255 220 255
+    SetBorderColor 0 220 180 255
+    SetBackgroundColor 0 55 50 255
+    PlayAlertSound 1 250
+    MinimapIcon 0 Cyan Kite
+    PlayEffect Cyan
+
+# --- Bijouterie visee : Prismatic Ring / Stellar Amulet / Rawhide Belt ---------
+Show
+    BaseType "Prismatic Ring" "Stellar Amulet" "Rawhide Belt"
     SetFontSize 40
     SetTextColor 100 255 220 255
     SetBorderColor 0 200 170 255
     SetBackgroundColor 0 50 45 255
     PlayAlertSound 1 200
-    MinimapIcon 1 Cyan Kite
+    MinimapIcon 1 Cyan Circle
     PlayEffect Cyan
+
+# --- Autres arcs haut ilvl (bonnes bases a crafter) ---------------------------
+Show
+    Class "Bow"
+    ItemLevel >= 75
+    SetFontSize 38
+    SetTextColor 200 255 100 255
+    SetBorderColor 150 200 50 255
+    MinimapIcon 1 Green Triangle
+    PlayEffect Green
+
+# --- Autres carquois haut ilvl (+proj / dps) ----------------------------------
+Show
+    Class "Quiver"
+    ItemLevel >= 70
+    SetFontSize 38
+    SetTextColor 200 255 100 255
+    SetBorderColor 150 200 50 255
+    MinimapIcon 1 Green Kite
+    PlayEffect Green
 
 
 #===============================================================================
