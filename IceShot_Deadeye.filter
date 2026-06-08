@@ -1,0 +1,310 @@
+#===============================================================================
+# FILTRE PATH OF EXILE 2 — Ice Shot Deadeye (Early Endgame)
+#-------------------------------------------------------------------------------
+# Objectif    : accumulation de CURRENCY + bases de CRAFT pour la build
+# Build       : Arc / Carquois / Evasion (DEX), hybride EV-ES en option
+# Severite    : semi-stricte (cache le bruit, garde tout ce qui compte)
+# Alertes     : sons + icones minimap + faisceaux actifs
+#-------------------------------------------------------------------------------
+# Installation : copier ce fichier dans
+#   Documents/My Games/Path of Exile 2/
+# puis l'activer dans Options > Game > Item Filter.
+#
+# Note : si le jeu signale une ligne en erreur (un nom de Class/BaseType qui
+# aurait change avec un patch), envoie-moi la ligne et je la corrige.
+#===============================================================================
+
+
+#===============================================================================
+# 1) CURRENCY  (priorite n°1)
+#===============================================================================
+
+# --- Tier S : Mirror / Divine / Perfect Jeweller's (ne JAMAIS rater) ----------
+Show
+    Class "Stackable Currency"
+    BaseType "Mirror of Kalandra" "Divine Orb" "Perfect Jeweller's Orb" "Hinekora's Lock"
+    SetFontSize 45
+    SetTextColor 255 0 0 255
+    SetBorderColor 255 0 0 255
+    SetBackgroundColor 255 255 255 255
+    PlayAlertSound 6 300
+    MinimapIcon 0 Red Star
+    PlayEffect Red
+
+# --- Tier A : grosses orbes (Exalted / Chaos / Annul / Regal / Vaal / Jeweller) -
+Show
+    Class "Stackable Currency"
+    BaseType "Exalted Orb" "Chaos Orb" "Orb of Annulment" "Regal Orb" "Vaal Orb" "Greater Jeweller's Orb" "Fracturing Orb"
+    SetFontSize 44
+    SetTextColor 255 255 255 255
+    SetBorderColor 255 160 0 255
+    SetBackgroundColor 120 40 0 255
+    PlayAlertSound 2 300
+    MinimapIcon 0 Yellow Diamond
+    PlayEffect Yellow
+
+# --- Tier B : currency de craft moyenne ---------------------------------------
+Show
+    Class "Stackable Currency"
+    BaseType "Orb of Alchemy" "Orb of Chance" "Artificer's Orb" "Gemcutter's Prism" "Lesser Jeweller's Orb" "Glassblower's Bauble"
+    SetFontSize 40
+    SetTextColor 255 255 255 255
+    SetBorderColor 255 200 90 255
+    SetBackgroundColor 70 40 0 255
+    PlayAlertSound 1 250
+    MinimapIcon 1 Yellow Circle
+    PlayEffect Yellow
+
+# --- Tier C : currency de base (transmute/aug/whetstone...) --------------------
+Show
+    Class "Stackable Currency"
+    BaseType "Orb of Transmutation" "Orb of Augmentation" "Blacksmith's Whetstone" "Arcanist's Etcher" "Armourer's Scrap"
+    SetFontSize 35
+    SetTextColor 220 220 220 255
+    SetBorderColor 120 120 120 255
+    MinimapIcon 2 Grey Circle
+
+# --- Filet de securite : TOUTE autre currency reste visible -------------------
+Show
+    Class "Stackable Currency"
+    SetFontSize 38
+    SetTextColor 255 255 255 255
+    SetBorderColor 200 200 200 255
+    MinimapIcon 1 White Circle
+    PlayEffect White
+
+
+#===============================================================================
+# 2) MATERIAUX DE CRAFT  (runes, soul cores, omens)
+#===============================================================================
+
+# --- Soul Cores (craft / pricey) ----------------------------------------------
+Show
+    Class "Soul Core"
+    SetFontSize 42
+    SetTextColor 0 255 255 255
+    SetBorderColor 0 255 255 255
+    SetBackgroundColor 0 50 60 255
+    PlayAlertSound 3 300
+    MinimapIcon 0 Cyan Hexagon
+    PlayEffect Cyan
+
+# --- Rune phare de la build : Greater Iron Rune (degats phys) ------------------
+Show
+    Class "Rune"
+    BaseType "Greater Iron Rune" "Iron Rune"
+    SetFontSize 42
+    SetTextColor 255 255 255 255
+    SetBorderColor 0 220 220 255
+    SetBackgroundColor 0 60 60 255
+    PlayAlertSound 3 250
+    MinimapIcon 0 Cyan Square
+    PlayEffect Cyan
+
+# --- Autres runes -------------------------------------------------------------
+Show
+    Class "Rune"
+    SetFontSize 38
+    SetTextColor 0 220 220 255
+    SetBorderColor 0 160 160 255
+    MinimapIcon 1 Cyan Square
+    PlayEffect Cyan
+
+# --- Omens --------------------------------------------------------------------
+Show
+    Class "Omen"
+    SetFontSize 40
+    SetTextColor 255 120 255 255
+    SetBorderColor 255 120 255 255
+    SetBackgroundColor 60 0 60 255
+    PlayAlertSound 4 300
+    MinimapIcon 0 Purple Moon
+    PlayEffect Purple
+
+
+#===============================================================================
+# 3) GEMMES BRUTES  (Uncut Skill / Support / Spirit)
+#===============================================================================
+Show
+    BaseType "Uncut Spirit Gem"
+    SetFontSize 42
+    SetTextColor 30 255 180 255
+    SetBorderColor 30 255 180 255
+    SetBackgroundColor 0 50 40 255
+    PlayAlertSound 3 300
+    MinimapIcon 0 Green Hexagon
+    PlayEffect Green
+
+Show
+    BaseType "Uncut Skill Gem" "Uncut Support Gem"
+    SetFontSize 40
+    SetTextColor 30 255 180 255
+    SetBorderColor 30 200 150 255
+    MinimapIcon 1 Green Hexagon
+    PlayEffect Green
+
+
+#===============================================================================
+# 4) WAYSTONES  (progression endgame de l'Atlas)
+#===============================================================================
+
+# --- Waystones haut tier (T11+) -----------------------------------------------
+Show
+    Class "Waystone"
+    WaystoneTier >= 11
+    SetFontSize 42
+    SetTextColor 255 255 255 255
+    SetBorderColor 255 140 0 255
+    SetBackgroundColor 90 40 0 255
+    PlayAlertSound 2 250
+    MinimapIcon 0 Orange Square
+    PlayEffect Orange
+
+# --- Waystones tier moyen (T6-10) ---------------------------------------------
+Show
+    Class "Waystone"
+    WaystoneTier >= 6
+    SetFontSize 38
+    SetTextColor 255 200 150 255
+    SetBorderColor 200 120 0 255
+    MinimapIcon 1 Orange Square
+    PlayEffect Orange
+
+# --- Waystones bas tier -------------------------------------------------------
+Show
+    Class "Waystone"
+    SetFontSize 34
+    SetTextColor 200 160 120 255
+    SetBorderColor 150 90 0 255
+    MinimapIcon 2 Brown Square
+
+
+#===============================================================================
+# 5) UNIQUES & JOYAUX
+#===============================================================================
+
+# --- Tous les uniques (Hyrri's Ire / Cadiro's Gambit etc.) --------------------
+Show
+    Rarity Unique
+    SetFontSize 44
+    SetTextColor 175 96 37 255
+    SetBorderColor 175 96 37 255
+    SetBackgroundColor 30 15 0 255
+    PlayAlertSound 5 300
+    MinimapIcon 0 Brown Star
+    PlayEffect Brown
+
+# --- Joyaux (Jewels) ----------------------------------------------------------
+Show
+    Class "Jewel"
+    SetFontSize 40
+    SetTextColor 255 0 200 255
+    SetBorderColor 255 0 200 255
+    SetBackgroundColor 50 0 40 255
+    PlayAlertSound 4 250
+    MinimapIcon 0 Pink Diamond
+    PlayEffect Pink
+
+
+#===============================================================================
+# 6) BASES DE CRAFT DE LA BUILD  (Arc / Carquois / Evasion)
+#===============================================================================
+
+# --- Top bases d'arc : Warmonger / Obliterator (a tout ilvl) ------------------
+Show
+    Class "Bow"
+    BaseType "Warmonger Bow" "Obliterator Bow"
+    SetFontSize 44
+    SetTextColor 255 255 0 255
+    SetBorderColor 255 255 0 255
+    SetBackgroundColor 0 60 0 255
+    PlayAlertSound 2 250
+    MinimapIcon 0 Yellow Triangle
+    PlayEffect Yellow
+
+# --- Autres arcs haut ilvl (bonnes bases a crafter) ---------------------------
+Show
+    Class "Bow"
+    ItemLevel >= 75
+    SetFontSize 40
+    SetTextColor 200 255 100 255
+    SetBorderColor 150 200 50 255
+    MinimapIcon 1 Green Triangle
+    PlayEffect Green
+
+# --- Carquois (grosse source de degats — on garde tout haut ilvl) -------------
+Show
+    Class "Quiver"
+    ItemLevel >= 70
+    SetFontSize 40
+    SetTextColor 200 255 100 255
+    SetBorderColor 150 200 50 255
+    MinimapIcon 1 Green Kite
+    PlayEffect Green
+
+# --- Bases d'armure phares de la build (Evasion / hybride ES) -----------------
+Show
+    BaseType "Freebooter Cap" "Subterfuge Mask" "Polished Bracers" "Drakeskin Boots"
+    SetFontSize 40
+    SetTextColor 100 255 220 255
+    SetBorderColor 0 200 170 255
+    SetBackgroundColor 0 50 45 255
+    PlayAlertSound 1 200
+    MinimapIcon 1 Cyan Kite
+    PlayEffect Cyan
+
+
+#===============================================================================
+# 7) RARES UTILES  (craft / vente / chaos-regal fodder)
+#===============================================================================
+
+# --- Rares armure Evasion haut ilvl (bases a crafter pour la build) -----------
+Show
+    Rarity Rare
+    Class "Helmet" "Gloves" "Boots" "Body Armour"
+    ItemLevel >= 75
+    SetFontSize 38
+    SetTextColor 255 255 119 255
+    SetBorderColor 200 200 80 255
+    MinimapIcon 1 Yellow Circle
+
+# --- Rares bijouterie (anneaux/amulette/ceinture) — toujours utiles ----------
+Show
+    Rarity Rare
+    Class "Ring" "Amulet" "Belt"
+    SetFontSize 38
+    SetTextColor 255 255 119 255
+    SetBorderColor 220 220 90 255
+    MinimapIcon 1 Yellow Circle
+    PlayEffect Yellow
+
+# --- Autres rares haut ilvl (fodder de craft / disenchant) --------------------
+Show
+    Rarity Rare
+    ItemLevel >= 65
+    SetFontSize 34
+    SetTextColor 255 255 119 255
+    SetBorderColor 90 90 90 255
+
+
+#===============================================================================
+# 8) QUALITE  (objets a quality, utiles pour recettes / craft)
+#===============================================================================
+Show
+    Quality >= 18
+    SetFontSize 36
+    SetTextColor 200 200 255 255
+    SetBorderColor 120 120 200 255
+
+
+#===============================================================================
+# 9) NETTOYAGE  (semi-stricte : on cache le bruit restant)
+#===============================================================================
+
+# --- On cache les rares bas ilvl non couverts ---------------------------------
+Hide
+    Rarity Rare
+
+# --- On cache tout le reste (normaux / magiques non pertinents) ---------------
+Hide
+    Rarity <= Magic
